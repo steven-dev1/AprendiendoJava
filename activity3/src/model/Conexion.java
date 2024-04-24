@@ -17,7 +17,7 @@ public class Conexion {
     private Connection con;
     private String usuario = "root";
     private String password = "";
-    private String url = "jdbc:mysql://localhost/bdmvc?serverTimezone=UTC";
+    private String url = "jdbc:mysql://localhost/dbmvc?serverTimezone=UTC";
 
     public Conexion() {
          try {

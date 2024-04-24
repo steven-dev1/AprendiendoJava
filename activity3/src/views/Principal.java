@@ -14,8 +14,12 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
+    vistaPrograma vPrograma;
     public Principal() {
         initComponents();
+        
+        vPrograma = new vistaPrograma();
+        add(vPrograma);
     }
 
     /**
@@ -30,7 +34,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menusalir = new javax.swing.JMenu();
         menuSalir = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuPrograma = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,8 +52,22 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(menusalir);
 
-        jMenu2.setText("Programa");
-        jMenuBar1.add(jMenu2);
+        menuPrograma.setText("Programa");
+        menuPrograma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuProgramaActionPerformed(evt);
+            }
+        });
+
+        jMenuItem1.setText("Administrar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuPrograma.add(jMenuItem1);
+
+        jMenuBar1.add(menuPrograma);
 
         setJMenuBar(jMenuBar1);
 
@@ -70,6 +89,15 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_menuSalirActionPerformed
+
+    private void menuProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProgramaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_menuProgramaActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        vPrograma.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,8 +135,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenu menuPrograma;
     private javax.swing.JMenuItem menuSalir;
     private javax.swing.JMenu menusalir;
     // End of variables declaration//GEN-END:variables
